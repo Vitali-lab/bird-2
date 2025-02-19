@@ -44,7 +44,7 @@ html {
 }
 
 body{
-min-width: 1440px;
+max-width: 2560px;
 font-family: 'Raleway';
 transition: all 5s ease;
 margin: 0 auto;
@@ -234,14 +234,17 @@ margin: 0 auto;
 }
 
 .busket__menu {
-position: absolute;
-top: 100px;
 
+display: flex;
+position: fixed;
+top: 100px;
+justify-content:center;
+align-items: center;
 width: 100%;
 height: 650px;
-
+opacity: 0.9;
 text-align: center;
-transform: translate(-5000px) ;
+transform: translate(-2000px) ;
 transition: all 1s ease;
 background-color: #E1EDE6;
 
@@ -443,7 +446,7 @@ flex-wrap: wrap;
     padding-top: 60px;
     margin-left: 150px;
     padding-left: 100px;
-    background-image: url(/img/Star\ 2.png);
+    background-image: url(img/Star\ 2.png);
     background-repeat: no-repeat;
     background-position: 13px 60px;
     
