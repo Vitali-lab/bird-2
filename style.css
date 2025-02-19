@@ -423,7 +423,7 @@ flex-wrap: wrap;
     min-height: 574px;
 }
 .new__items {
-    background-image: url(/img/pic_background.png);
+    background-image: url(img/pic_background.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 60px;
