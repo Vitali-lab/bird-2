@@ -44,7 +44,7 @@ function obenBusket () {
 }
     let busketGo = () => {
     busket.style.transform = 'translateX(-15px)'
-    busket.style.transition = 'transform 3s ease'  
+    busket.style.transition = 'transform 1.5s ease'  
 }
     let busketMenuGo = () => {
         busketMenu.style.transform = 'translateX(0px)'
@@ -60,9 +60,10 @@ shop.addEventListener('click', obenBusket)
 
 function closeBuskets () {
     busket.style.transform = 'translateX(-900px)'
+    busket.style.transition = 'transform 1s ease'
     let closeBusketMenu = () => {
     busketMenu.style.transform = 'translate(-5000px)'
-    busketMenu.style.transition = 'transform 3s ease'   
+    busketMenu.style.transition = 'transform 4s ease'   
     }
     let race = () => {   
         shop.style.transform = 'translateX(0px)'
