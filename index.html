@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="wapper">
@@ -13,118 +14,76 @@
         <header class="header" id="header">
             <div class="container">
             <div class="header__row">
-                <div class="header__img"><img src="img/Frame 85.svg" alt=""></div>
+                <div class="header__img" id="header__img"><img src="/img/Frame 85.svg" alt=""></div>
                 <ul class="header__menu">
                      <li><a href="">Репродукции</a></li>
                      <li><a href="#" id="new">Новинки <i class="fa-solid fa-chevron-down" id="down"></i></a>
                      <ul class="submenu" id="submenu">
-                        <li><a href="">Оригиналы картин </a></li>
+                        <li id="origPictures"><a href="#">Оригиналы картин </a></li>
                         <li><a href="">Реплики картин</a></li>
                         <li><a href="">Наши работы</a></li>
                      </ul>
                     </li>
                      <li><a href="#team">О нас</a></li>
-                     <li class="shop" id="shops"><a href="#header"><img src="img/Frame 217.svg" alt=""></a></li>
+                     <li class="shop" id="shops"><a href="#header"><img src="/img/Frame 217.svg" alt=""></a></li>
                 </ul>
             </div>
         </div>
-        </header>
+        </header >
+        <div id="pageOne">
         <div class="bird" id="bird">
             <div class="bird__row">
                 <div class="bird__img">
-                    <img src="img/Layer 0 1.png" alt="">
+                    <img src="/img/Layer 0 1.png" alt="">
                 </div>
                 <div class="bird__content">
                     <div class="bird__header">Реплики картин от <span>Ink. House</span></div>
                     <div class="bird__text">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</div>
-                    <div class="bird__button"><a href="#picture__sale"><button>Продукция</button></div></a>
+                    <div class="bird__button"><a href="#product-container"><button>Продукция</button></div></a>
                 </div>
             </div>
         </div>
         <section class="busket__menu" id="busketMenu">
-            <div class="container">
-                <div class="busket__menu-name">
-                    <p><a href="#" ><img class="busket" src="img/Frame 217.svg" alt="" id="busket" ></a>Корзина</p>
+            <div class="busket__menu-name">
+                <div class="busket">
+                    <a href="#" ><img class="busket" src="/img/Frame 217.svg" alt="" id="busket" ></a>
                 </div>
-            </div>
+                <p>Корзина</p>
+                <div class="cartItems"id="cartItems"></div>
+                </div>
+           
         </section>
         <div class="pictures">
             <div class="container">
-                <div class="pictures__title">
+                <div class="pictures__title" 
+                data-aos="fade-up"
+                data-aos-offset="200" 
+                data-aos-duration = "300"
+                data-aos-once = "false"
+                data-aos-delay = "0">
                     <div class="title-text">Репродукции</div>
                     <ul class="title-button">
+                        <li><button class="pic-btn">Все</button></li>
                         <li><button class="pic-btn">Франция</button></li>
                         <li><button class="pic-btn">Германия</button></li>
                         <li><button class="pic-btn">Англия</button></li>
                     </ul>
                 </div>
-                <div class="picture__sale" id="picture__sale">
-                    <div class="pictures__blank">
-                        <div class="blank-img">
-                            <img src="img/03.jpg" alt="">
-                        </div>
-                        <div class="blank-author">Марсель Руссо</div>
-                        <div class="blank-name">Охота Амура</div>
-                        <div class="blank-holst">Холст, масло (50х80) </div>
-                        <div class="blank-price">14 500 руб</div>
-                        <div class="blank-button">В корзину</div>
-                    </div>
-                   
-                    <div class="pictures__blank">
-                        <div class="blank-img">
-                            <img src="img/dama.jpg" alt="">
-                        </div>
-                        <div class="blank-author">Анри Селин</div>
-                        <div class="blank-name">Дама с собачкой</div>
-                        <div class="blank-holst">Акрил, бумага (50х80)  </div>
-                        <div class="blank-price">16 500 руб</div>
-                        <div class="blank-button">В корзину</div>
-                    </div>
-                    <div class="pictures__blank">
-                        <div class="blank-img">
-                            <img src="img/proc.jpg" alt="">
-                        </div>
-                        <div class="blank-author">Франсуа Дюпон</div>
-                        <div class="blank-name">Процедура</div>
-                        <div class="blank-holst">Цветная литография (40х60)  </div>
-                        <div class="blank-price">20 000 руб</div>
-                        <div class="blank-button">В корзину</div>
-                    </div>
-                    <div class="pictures__blank">
-                        <div class="blank-img">
-                            <img src="img/rose.jpg" alt="">
-                        </div>
-                        <div class="blank-author">Луи Детуш</div>
-                        <div class="blank-name">Роза</div>
-                        <div class="blank-holst">Бумага, акрил (50х80)  </div>
-                        <div class="blank-price">12 000 руб</div>
-                        <div class="blank-button">В корзину</div>
-                    </div><div class="pictures__blank">
-                        <div class="blank-img">
-                            <img src="img/birds.jpg" alt="">
-                        </div>
-                        <div class="blank-author">Франсуа Дюпон</div>
-                        <div class="blank-name">Птичья трапеза</div>
-                        <div class="blank-holst">Цветная литография (40х60)  </div>
-                        <div class="blank-price">22 500 руб</div>
-                        <div class="blank-button">В корзину</div>
-                    </div>
-                    <div class="pictures__blank">
-                        <div class="blank-img">
-                            <img src="img/fish.jpg" alt="">
-                        </div>
-                        <div class="blank-author">Пьер Моранж</div>
-                        <div class="blank-name">Пейзаж с рыбой</div>
-                        <div class="blank-holst">Цветная литография (40х60)  </div>
-                        <div class="blank-price">20 000 руб</div>
-                        <div class="blank-button">В корзину</div>
-                    </div>
-                </div>
+                <div class="product-container" id="product-container" 
+                data-aos="fade-up"
+                data-aos-offset="300" 
+                data-aos-duration = "400"
+                data-aos-once = "false"
+                data-aos-delay = "100"></div>
                 
-            </div>
-        </div>
-        <div class="new">
-            <div class="new__row">
+        <div  class="new" id="newFranch">
+            <div class="new__row"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-offset="1000" 
+        data-aos-duration = "500"
+        data-aos-once = "true"
+        data-aos-delay = "300">
                 <div class="new__items">
                     <div class="new-item">
                         <div class="item-title">Новая коллекция французских авторов</div>
@@ -132,22 +91,37 @@
                             <p>Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений. </p>
                             <p>Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую востребованность направлений прогрессивного развития.</p>
                         </div>
-                        <div class="item-button"><button>Ознакомиться</button></div>
+                        <div class="item-button" id="item-button"><button>Ознакомиться</button></div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
-        <div class="team" id="team">
+               <div class="franch__items" id="franch__items">
+                <div class="new-item">
+                    <div class="item-title">Новая коллекция французских авторов</div>
+                    <div class="item-text">
+                    </div>
+                    <div class="item-button" id="item-button"><button>Ознакомиться</button></div>
+                    </div>
+                </div>
+        <div class="team" id="team" 
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-offset="1000" 
+        data-aos-duration = "1000"
+        data-aos-once = "true"
+        data-aos-delay = "100">
             <div class="container">
                 <div class="team__row">
                     <div class="team__items">
                         <div class="item-pic">
-                            <img src="img/Group 210.png" alt="">
+                            <img src="/img/Group 210.png" alt="">
                         </div>
                         <div class="item-tex">
                             <div class="tex-title">Наша команда</div>
                             <div class="tex-text">Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.</div>
-                            <div class="tex-pic"><img src="img/Frame 254.png" alt=""></div>
+                            <div class="tex-pic"><img src="/img/Frame 254.png" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -155,7 +129,10 @@
         </div>    
         </div>
     </div>
-    
+        </div>
+        <div class="origPic" id="origPic">
+            <h2>Оригиналы картин</h2>
+        </div>
 
         <footer class="footer">
             <div class="conteiner">
@@ -192,7 +169,7 @@
                         </div>
                         <div class="links">
                         <div class="item-links">
-                            <img src="img/Frame 258.png" alt=""></div>
+                            <img src="/img/Frame 258.png" alt=""></div>
                         <div class="item-text1">Ink. House ®</div>
                         <div class="item-text1">All rights reserved</div>
                     </div>
@@ -201,6 +178,10 @@
             </div>
         </footer>
       </div>
-    <script src="sapp.js"></script>
+    <script defer src="/sapp.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
