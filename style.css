@@ -978,7 +978,7 @@ transition: all 1s ease;
     padding-top: 60px;
     margin-left: 150px;
     padding-left: 100px;
-    background-image: url(/img/Star\ 2.png);
+    background-image: url(img/Star\ 2.png);
     background-repeat: no-repeat;
     background-position: 13px 60px;
     
@@ -1142,7 +1142,7 @@ padding-bottom: 10px;
         
 .franch__items {
     
-    background-image: url(/img/fish.jpg);
+    background-image: url(img/fish.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
