@@ -12,9 +12,10 @@
     <div class="wapper">
     <div class="content">
         <header class="header" id="header">
+            
             <div class="container">
             <div class="header__row">
-                <div class="header__img" id="header__img"><img src="img/Frame 85.svg" alt=""></div>
+                <div class="header__img" id="header__img"><a href="#bird"><img src="img/Frame 85.svg" alt=""></a></div>
                 <ul class="header__menu">
                      <li><a href="">Репродукции</a></li>
                      <li><a href="#" id="new">Новинки <i class="fa-solid fa-chevron-down" id="down"></i></a>
@@ -25,7 +26,7 @@
                      </ul>
                     </li>
                      <li><a href="#team">О нас</a></li>
-                     <li class="shop" id="shops"><a href="#header"><img src="img/Frame 217.svg" alt=""></a></li>
+                     <li class="shop" id="shops"><a href="#header"> <span id="busketNot">0</span><img src="img/Frame 217.svg" alt=""></a></li>
                 </ul>
             </div>
         </div>
@@ -49,6 +50,7 @@
                     <a href="#" ><img class="busket" src="img/Frame 217.svg" alt="" id="busket" ></a>
                 </div>
                 <p>Корзина</p>
+                <button id="buttonClose"><i class="fa-regular fa-circle-xmark fa-2xl" style="color: #0d0d0c;"></i></button>
                 <div class="cartItems"id="cartItems"></div>
                 </div>
            
@@ -57,14 +59,14 @@
             <div class="container">
                 <div class="pictures__title" 
                 data-aos="fade-up"
-                data-aos-offset="200" 
+                data-aos-offset="300" 
                 data-aos-duration = "300"
                 data-aos-once = "false"
                 data-aos-delay = "0">
                     <div class="title-text">Репродукции</div>
                     <ul class="title-button">
                         <li><button class="pic-btn">Все</button></li>
-                        <li><button class="pic-btn">Франция</button></li>
+                        <li><button class="pic-btn" id="buttonFranch">Франция</button></li>
                         <li><button class="pic-btn">Германия</button></li>
                         <li><button class="pic-btn">Англия</button></li>
                     </ul>
@@ -72,7 +74,7 @@
                 <div class="product-container" id="product-container" 
                 data-aos="fade-up"
                 data-aos-offset="300" 
-                data-aos-duration = "400"
+                data-aos-duration = "500"
                 data-aos-once = "false"
                 data-aos-delay = "100"></div>
                 
@@ -80,8 +82,8 @@
             <div class="new__row"
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
-        data-aos-offset="300" 
-        data-aos-duration = "200"
+        data-aos-offset="800" 
+        data-aos-duration = "300"
         data-aos-once = "true"
         data-aos-delay = "300">
                 <div class="new__items">
@@ -108,8 +110,8 @@
         <div class="team" id="team" 
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
-        data-aos-offset="200" 
-        data-aos-duration = "200"
+        data-aos-offset="1000" 
+        data-aos-duration = "500"
         data-aos-once = "true"
         data-aos-delay = "100">
             <div class="container">
@@ -139,7 +141,7 @@
                 <div class="footer__row">
                     <div class="footer__items">
                         <div class="item-logo">
-                            <img src="/img/Frame 85.svg" alt="">
+                            <img src="img/Frame 85.svg" alt="">
                             <div class="item-num">+7 (999) 543-54-54 <br> Мастерская</div>
                         </div>
                         
