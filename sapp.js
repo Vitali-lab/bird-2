@@ -488,7 +488,7 @@ let lastScrollTop = 0;
 const header1 = document.getElementById('header');
 
 window.addEventListener('scroll', function() {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  let currentScroll = window.scrollY || document.documentElement.scrollTop;
 
   
   if (currentScroll > lastScrollTop) {
