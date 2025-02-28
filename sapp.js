@@ -14,6 +14,9 @@ const pageOne = document.getElementById('pageOne')
 const origButton = document.getElementById('origPictures')
 const origBlock = document.getElementById('origPic')
 const body = document.querySelector('body')
+const buttonClose = document.getElementById ('buttonClose')
+const busketNot = document.getElementById('busketNot')
+const buttonFranch = document.getElementById('buttonFranch')
 
 isMenuOpen = false
 function openSubMenu () {
@@ -58,14 +61,15 @@ function obenBusket () {
     busket.style.transform = 'rotateX(0deg)'
     busket.style.transition = 'transform 1.5s ease'
     
+    
 }
     let busketMenuGo = () => {
         busketMenu.style.transform = 'rotateX(0deg)'
        
         busketMenu.style.transition = 'transform 1.3s ease'
 }
-    
-
+   
+   
     setTimeout (race, 100)
     setTimeout (birdRace, 300)
     setTimeout (busketGo, 1700)
@@ -109,7 +113,7 @@ function closeBuskets () {
         header.style.transition = 'all 2s ease'
     }
       
-
+   
 
     setTimeout (closeBusketMenu, 200)
     setTimeout (race, 800)
@@ -117,6 +121,8 @@ function closeBuskets () {
 
 }
 
+
+buttonClose.addEventListener ('click', closeBuskets)
 
 busket.addEventListener ('click', closeBuskets)
 
@@ -208,16 +214,31 @@ function delToCart(item) {
   
     if(index !== -1) {
         cart.splice(index, 1)
-       }  
+        updateCartUI();
+        cartNotif()
+    }  
+
 }
 
-
+function cartNotif() {
+        
+    if(cart.length < 1) {
+        console.log (cart.length)
+        busketNot.style.opacity = '0'
+        busketNot.textContent = ' '
+    } else {
+        busketNot.style.opacity = '1'
+        busketNot.textContent = cart.length
+    }
+}
 
 
 
 function updateCartUI() {
     const cartItems = document.getElementById('cartItems');
+    
     cartItems.innerHTML = '';
+    
     cart.forEach(item => {
         
         const card =
@@ -250,6 +271,7 @@ function updateCartUI() {
         buttonDel.addEventListener('click' , function () {
             delToCart(item)
             updateCartUI()
+            
         })
 
         const fullPrice = document.createElement('div')
@@ -258,7 +280,11 @@ function updateCartUI() {
         let sum = cart.reduce((accumulator, currentItem) => currentItem.price + accumulator, 0
         )
         fullPrice.textContent = `Всего цена:  ${sum} руб.`
+
+        
+
         cartItems.appendChild(fullPrice)
+        
          
 
         
@@ -271,7 +297,7 @@ function updateCartUI() {
     cartItems.appendChild(card)
     });
 
-    
+    cartNotif()
 }
 
 
@@ -321,9 +347,7 @@ arrowProduct.product.forEach(product => {
     document.createElement('b')
     price.textContent = `${product.price} руб`
 
-    const info = 
-    document.createElement ('p')
-    info.textContent = 'Hello'
+    
 
     const button = 
     document.createElement('button')
@@ -332,6 +356,43 @@ arrowProduct.product.forEach(product => {
     button.addEventListener('click', () => {
         addToCart(product);
         updateCartUI();
+
+        const notification = 
+    document.createElement('div')
+    notification.className = 'notificationCart'
+
+    const notificationInfo = 
+    document.createElement ('p')
+    notificationInfo.innerHTML = `Товар "${product.title}" добавлен в корзину! <br/> <p><p/> Всего ${cart.length} шт. в корзине.`
+        
+        function notificationUp () {
+            notification.style.opacity = '0'
+            notification.style.transition = 'all 1s ease'
+        }
+        function notificationDisplayNone () {
+            notification.style.display = 'none'
+        }
+        setTimeout(notificationUp, 1000)
+        setTimeout(notificationDisplayNone, 2000)
+
+
+        notification.appendChild(notificationInfo)
+        body.appendChild(notification)
+
+       
+
+
+        button.textContent = 'Товар добавлен в корзину'
+
+        function cartnot () {
+            button.textContent = 'В корзину' 
+            
+        }
+        setTimeout(cartnot, 500)
+
+       
+    
+
     });
     
 
@@ -343,7 +404,7 @@ arrowProduct.product.forEach(product => {
     card.appendChild(desc)
     card.appendChild(price)
     card.appendChild(button)
-    card.appendChild(info)
+    
 
 
     productContainer.appendChild(card)
@@ -361,6 +422,7 @@ arrowProduct.product.forEach(product => {
         const buttonOut = 
         document.createElement('button')
         buttonOut.innerHTML = '<i class="fa-regular fa-circle-xmark fa-2xl" style="color:rgba(0, 0, 0, 0.86);"></i>'
+        
         
 
         img.style.border = '3px solid black'
@@ -419,3 +481,21 @@ origButton.addEventListener('click', function () {
 setTimeout(showOrigBlock, 1000)
 })
 
+
+
+
+let lastScrollTop = 0; 
+const header1 = document.getElementById('header');
+
+window.addEventListener('scroll', function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  
+  if (currentScroll > lastScrollTop) {
+    header1.style.top = '-100px'; 
+  } else {
+    header1.style.top = '0'; 
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+});
